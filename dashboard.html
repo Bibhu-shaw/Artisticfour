@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="styles3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+           
+        }
+        #slideshow-container {
+            width: 600px; 
+            height: 500px; 
+            background-position:center; 
+            overflow: hidden; 
+            border: 7px solid #0b226a; 
+        }
+        
+        #slideshow-container img {
+            width: 100%; 
+            height: auto; 
+        }
+        .cont{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 33px solid rgb(16, 16, 16);
+            border-radius:35px;
+        }
+        #btn{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding:15px ;
+            background-color: red;
+            border-radius:35px;
+            font-size: 14px;
+            font-weight: bolder;
+            border: none;
+            box-shadow: 0 10px 10px grey;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #btn:hover{
+            scale: 1.2;
+        }
+        .btn1{
+            display: flex;
+            justify-content: center;
+        }.contact-info {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#phone-link {
+    color: blue;
+    text-decoration: none;
+}
+
+#phone-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contact-info,.about{
+    flex: 1; 
+  padding: 20px;
+
+}
+.contact-info{
+    width: 40%;
+    
+    
+}
+.About{
+    justify-content: center;
+    align-items: center;
+    background-color: ;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+}
+        
+.logo {
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            position: right;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 3px solid white; 
+            cursor: pointer;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+#categorySelect{
+    font-size: 16.5px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+h1{
+    cursor: pointer;
+}
+
+.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(172, 172, 172);
+    }
+    .left img {
+    width: 300px; 
+    height: 400px; 
+    border-radius: 50%; 
+    border: 5px solid black; 
+}
+
+    .right {
+        padding-left: 20px; 
+    }
+    .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: rgb(231, 231, 231);
+    }
+    .right img {
+        width: 300px; 
+        height: 400px; 
+        border-radius: 50%; 
+    }
+    .left {
+        padding-left: 20px; 
+    }
+    .last {
+        background-color: rgb(48, 58, 51);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+    }
+  
+
+    </style>
+
+</head>
+<body>
+    <header> 
+        <div class="logo">
+            <img src="/Users/bibhuprasadshaw/Downloads/Image5.webp" alt="Logo">
+        </div>
+
+        <h1>Art Gallery</h1>
+      
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li>
+                    <select id="categorySelect" onchange="redirectToCategory()">
+                        <option value="">Categories</option>
+                        <option value="/Users/bibhuprasadshaw/Desktop/Project1/Abstract.html">Abstract</option>
+                        <option value="/Users/bibhuprasadshaw/Desktop/Project1/water.html">Water</option>
+                        <option value="/Users/bibhuprasadshaw/Desktop/Project1/pastel.html">Pastel</option>
+                    </select>
+                </li>
+                <li><a href="#About" class="scroll-link">About Us</a></li>
+                <li><a href="#contact" class="scroll-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="cont">
+        <div id="slideshow-container"> 
+            <img name="slide"> 
+        </div>
+    </div>
+    
+    <script>
+        var i = 0;
+        var images = ['/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.11.jpeg', 'https://i.pinimg.com/originals/76/e7/55/76e75536d3303ccb0847a427c6087888.jpg', 'https://i.pinimg.com/originals/6e/a8/99/6ea8997554f6af932aefc011045f0c49.jpg', 'https://images.saatchiart.com/saatchi/1689730/art/8044808/7111855-YJMFMQHC-7.jpg','https://i.etsystatic.com/11867618/r/il/b1c149/4443480714/il_570xN.4443480714_6tpc.jpg'];
+        var slide = document.querySelector('[name="slide"]');
+    
+        function changeImage() {
+            slide.src = images[i];
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+            setTimeout(changeImage, 1000);
+        }
+    
+        changeImage();
+    </script>
+    
+    <div class="btn1">
+        <button onclick="window.location.href = 'view_paintings.html';" id="btn">View Paintings>></button>
+    </div>
+    
+    <section class="categories">
+    </section>
+    
+    <section class="Another">
+        <div class="container">
+            <div class="left">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3vFWVxTtTC2sYnFMjkFaQSmX5Lc7mSSOHfpWLNE5fGg&s" alt="Circular Image">
+            </div>
+            <div class="right">
+                <div class="content">
+                    <h2>WHO AM I?</h2>
+                    <p>At Artisticfour, art isn't just a hobby; it's a way of life. With a deep-rooted love for creativity and an unyielding desire to explore the boundless possibilities of expression, we bring forth a world where imagination knows no limits.</p>
+                    <p>But who am I amidst this artistic journey? I'm not just a professional artist; I'm a storyteller, a dreamer, and an explorer of emotions. My canvas isn't just a surface for paint; it's a stage where my innermost thoughts and feelings come to life with each stroke of the brush.</p>
+                    <p>I may not be a seasoned master artist in the traditional sense, but what I lack in technical prowess, I make up for in authenticity and passion. My art isn't about perfection; it's about sincerity—a genuine reflection of my emotions, experiences, and the world around me.</p>
+                    <p>Every painting I create is a piece of me, a glimpse into my soul laid bare for the world to see. Through color, texture, and form, I weave narratives that speak volumes about the human experience, capturing moments of joy, sorrow, love, and longing.</p>
+                    <p>So, if you're looking for art that goes beyond the surface, that delves deep into the heart of human emotion, you've come to the right place. Join me on this journey of self-discovery through art, where imperfections are celebrated, and every brushstroke tells a story.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="inspiration">
+        <div class="container2">
+            <div class="left">
+                <div class="content">
+                    <h2>MY INSPIRATION</h2>
+                    <p>Drawing inspiration from the kaleidoscope of life itself, we find beauty in the simplest of things. From the gentle brush of a breeze against a field of flowers to the profound depths of human emotion, our work is a reflection of the myriad wonders that surround us every day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <h2>Artistic Reflections</h2>
+        <div class="testimonial">
+            <p>"Painting always says the feelings and emotions!"</p>
+            <cite><span style="color:rgb(114, 24, 24)">- $h@w</cite></span>
+        </div>
+        <div class=""> <p5>Are you looking to add a personal touch to your space or gift a unique piece of art to someone special? Look no further! I specialize in creating custom paintings based on your ideas, designs, or preferences. Whether it's a portrait of a loved one, a scenic landscape, abstract art to match your decor, or anything else you envision, I'm here to bring your ideas to life on canvas.</p5> 
+        </div>
+         <div class="ready"> 
+            <p5>Ready to order your custom painting or have any questions? Feel free to reach out via <span style="color:rgb(44, 82, 221)">+917070932159</span> to discuss your ideas and get started on your unique artwork! Let's turn your imagination into reality on canvas!</p5> 
+        </div>
+        
+    </section>
+    
+    <footer>
+        <div class="About">
+            <h2 id="About"><span style="color:rgb(255, 255, 255)">About Us</span></h2>
+            <p>
+                I'm Bibhu, the creative mind behind the canvas. Here, we embark on a journey where every stroke of the brush tells a story, and every hue on the palette speaks volumes about our passion for art.
+                <br>
+                At Artisticfour, we believe that art is not just about technical prowess; it's about the raw emotions and personal experiences that breathe life into every brushstroke. While I may not consider myself a master painter in the traditional sense, I believe that true artistry lies in the ability to convey feelings and experiences through the medium of paint.
+                Every canvas becomes a canvas for self-expression, where joy, sorrow, love, and longing find their voice in a symphony of colors and shapes. With each piece, I aim not for perfection, but for authenticity—a genuine reflection of my innermost thoughts and emotions.
+                Artisticfour is not just a studio; it's a sanctuary where creativity flourishes and emotions run free. Join me on this journey of self-discovery through art, where imperfections are celebrated, and every stroke tells a story. Together, let's explore the depths of human experience and the limitless possibilities of expression.
+            </p>
+            <br>
+        </div>
+        <div class="contact-info">
+            <h2 id="contact"><span style="color:rgb(255, 255, 255)">Contact Us</span></h2>
+            <p>For inquiries, please call:</p>
+            <a id="phone-link" href="#" onclick="makeCall()">+917070932159</a>
+            <a href="#" id="call-button">Click to Call</a>
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61558486949730" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/480px-Facebook_Logo_2023.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/artisticfour/" target="_blank"><img src="https://img.freepik.com/free-vector/instagram-icon_1057-2227.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1710774000&semt=ais" alt="Instagram"></a>
+                <a href="https://x.com/artisticfo68871/status/1779513251795218459" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938028.png" alt="Twitter"></a>
+                <a href="mailto:sumanshaw98765@gmail.com"><img src="https://png.pngtree.com/png-clipart/20200721/original/pngtree-gmail-logo-png-png-image_4868140.jpg" alt="Email"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <section class="last">
+        <div>
+            <h1><span style="color:rgb(220, 206, 206)">Art Gallery</span></h1>
+        </div>
+    </section>
+    
+    <script>
+        $(document).ready(function(){
+            $(".scroll-link").click(function(event){
+                event.preventDefault();
+                var target = $(this).attr("href");
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 1000);
+            });
+        });
+    
+        function makeCall() {
+            var phoneNumber = "+917070932159";
+            window.location.href = "tel:" + phoneNumber;
+        }
+    </script>
+    
+    <script>
+    function redirectToCategory() {
+        var selectBox = document.getElementById("categorySelect");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        if (selectedValue) {
+            window.location.href = selectedValue;
+        }
+    }
+    </script>
+    
+    </body>
+    </html>

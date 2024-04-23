@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pastel painting</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.saatchiart.com/saatchi/1242553/art/9903963/8966891-KFJLMUAK-7.jpg'); /* Path to your background image */
+        }
+        header {
+            background-color: #061b05;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+            background-attachment: white;
+        }
+        .paintings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .painting {
+            margin: 20px;
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 20px 15px rgba(5, 19, 47, 0.1);
+        }
+        .painting img {
+            width: 100%;
+            height: auto;
+        }
+        .painting h2 {
+            margin-top: 10px;
+        }
+        .painting p {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #051d03;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        footer ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .social-media img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+        }
+        header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+button:hover {
+            background-color: #10931b;
+        }
+
+        header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    color: #faf2f2fb;
+    text-decoration: none;
+}
+.painting:hover {
+    transform: scale(1.1);
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1> <span style="color: rgb(241, 241, 241);">ABSTRACT PAINTINGS</span></h1>
+        <nav>
+          
+        </nav>
+        
+    </header>
+</body>
+
+
+
+<section class="paintings">
+    <div class="painting">
+        <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.07 (1).jpeg" alt="Abstract Painting 1">
+        <h2>Visage of Emotion</h2>
+        <p class="description">"Visage of Emotion" is a captivating portrayal of the human experience, inviting interpretation and introspection with its dynamic and enigmatic composition.</p>
+        <p>Price: $30</p>
+        <br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+        <button onclick="buyNow()">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+
+
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.11.jpeg" alt="Abstract Painting 2">
+            <h2>A Portrait of the Soul</h2>
+            <p class="description">"Ethereal Visage: A Portrait of the Soul" is a captivating abstract painting that defies conventional representation, offering a glimpse into the depths of the human spirit through its unique and enigmatic portrayal of the face. </p>
+            <p>Price: $70</p>
+            <br>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.17.jpeg" alt="Abstract Painting 2">
+            <h2>Eyes of Eternity</h2>
+            <p class="description">"Eyes of Eternity" is a captivating abstract painting that features a singular face intertwined with a peacock-like structure, evoking a sense of mystical beauty and transcendent grace. </p>
+            <p>Price: $70</p>
+            <br>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.24.jpeg" alt="Abstract Painting 2">
+            <h2>Ethereal Reverie</h2>
+            <p>"Ethereal Reverie" is more than just a painting; it is a gateway to another realm, where the boundaries between reality and imagination blur. It invites the viewer to lose themselves in its dreamlike beauty, to wander through its abstract landscapes, and to discover the hidden depths within its layers.</p>
+            <p>Price: $45</p>
+            <br>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.25.jpeg" alt="Abstract Painting 2">
+            <h2>Silent Soliloquy</h2>
+            <p>The anatomy of the figure is portrayed with a blend of realism and abstraction, with muscles and sinews rendered in intricate detail while also veiled in layers of mystery. The curve of her spine, the contours of her shoulder blades, and the subtle shadows that play across her skin all contribute to the sense of depth and dimensionality.</p>
+            <p>Price: $45</p>
+            <br>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.25 (1).jpeg" alt="Abstract Painting 2">
+            <h2>Duality's Gaze</h2>
+            <p> "Duality's Gaze" is a striking abstract painting that explores the concept of polarity and contrast through the depiction of two opposing female faces. On one side of the canvas, a face emerges with features bathed in warm, inviting tones. Soft curves and gentle lines convey a sense of serenity and compassion, with eyes that sparkle with empathy and understanding.</p>
+            <p>Price: $45</p>
+            <br>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.25 (2).jpeg" alt="Abstract Painting 2">
+            <h2>Euphoric Elegance</h2>
+            <p>The dancing girl is depicted with fluid, sweeping lines that convey a sense of effortless motion and poise. Each movement is a study in grace, with limbs extending and curving in a mesmerizing display of fluidity. Her silhouette, illuminated by soft, ethereal light, seems to shimmer and sway with every step.</p>
+            <p>Price: $30</p>
+            <br>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+        <div class="painting">
+            <img src="https://i.pinimg.com/736x/32/ad/2d/32ad2d41dad0b59a1dfc2632f9127116.jpg" alt="Abstract Painting 2">
+            <h2>Harmonic Trio</h2>
+            <p>Together, the three women form a symbiotic relationship, their individual talents melding together in perfect harmony. The drum's steady rhythm provides a steady heartbeat, while the flute and guitar dance around it, weaving melodies that soar and dip like birds in flight. Each note is a brushstroke on the canvas of sound, painting a picture of beauty and unity that transcends language and culture.</p>
+            <p>Price: $70</p>
+            <br>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        </div>
+
+
+        <div class="painting">
+            <img src="https://i.etsystatic.com/11867618/r/il/b1c149/4443480714/il_570xN.4443480714_6tpc.jpg" alt="Abstract Painting 2">
+            <h2>Melodies of Love</h2>
+            <p class="description">"Melodies of Love" is a captivating abstract painting that portrays the divine love between Krishna and Radha, with the flute as the central motif symbolizing Krishna's eternal connection to music and spirituality. </p>
+            <p>Price: $70</p>
+            <br>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+        
+
+    </section>
+    <script>
+        function redirectToCategory() {
+            var selectedCategory = document.getElementById("categorySelect").value;
+            if (selectedCategory) {
+                window.location.href = selectedCategory;
+            }
+        }
+        function buyNow() {
+    var paintingTitle = document.querySelector('.painting h2').innerText;
+    var paintingPrice = document.querySelector('.painting p:nth-child(3)').innerText;
+
+    var data = {
+        title: paintingTitle,
+        price: paintingPrice
+    };
+
+    var url = 'checkout.php'; // Example URL
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            window.location.href = 'thank_you.html';
+        }
+    };
+    xhr.send(JSON.stringify(data));
+}
+
+   
+       
+    function addToCart() {
+        alert("Item added to cart. Redirecting to checkout page...");
+    }
+
+
+    </script>
+
+    <footer>
+     
+    </footer>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        body{
+            background-image: url(/Users/bibhuprasadshaw/Downloads/image5.jpeg);
+            background-size: cover;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(0, 1, 5);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #100101;
+            color: rgb(8, 1, 1);
+            margin: 0;
+        }
+
+      
+
+        .signup-form{
+            background-color: rgb(37, 118, 45);
+            border: 30px solid rgb(107, 142, 107);
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+       
+
+
+        .signup-form img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .signup-form {
+            background-color: #d6f8b8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
+        .signup-form h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .signup-form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #110404;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .signup-form button {
+            background-color: #043c0a;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .logo {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: -50px auto 20px; /* Adjusted margin to position above the title */
+    border: 8px solid rgb(255, 255, 255); /* Add white border */
+
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+        
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="signup-form">
+        <!-- Logo section -->
+        <div class="logo">
+            <img src="/Users/bibhuprasadshaw/Downloads/Image5.webp" alt="Logo">
+        </div>
+    
+        <h2><u>Artisticfour.com</u></h2>
+        <h5>--Welcome!--</h5>
+        <form action="dashboard.html" method="post">
+            <label for="username"><b>Username:</b></label>
+            <input type="text" id="username" name="username" required>
+    
+            <!--<label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>-->
+    
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+     <script>
+    // Checking if the username and password are correct or not
+         document.querySelector("form").addEventListener('submit', function(event){
+           var user = document.getElementById('username').value;    
+           var pass = document.getElementById('password').value;    
+         
+           if (user == "admin" && pass=="admin"){
+               alert ("Logged in successfully");    
+               window.location.href='dashboard.html';    
+           }else {
+              event.preventDefault();    
+              alert ('Wrong Username or Password');    
+           };       
+         });
+      </script> 
+
+        
+
+</body>
+</html>
+

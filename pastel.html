@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pastel painting</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4j6nVj2hmMrpclHHUEPlci-0tRCHvw00gqgirRhAeqWL6WgvRPIvcExbC-3D8cCYKgqE&usqp=CAU'); /* Path to your background image */
+        }
+        header {
+            background-color: #082209;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+            background-attachment: white;
+        }
+        .paintings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .painting {
+            margin: 20px;
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 20px 15px rgba(5, 19, 47, 0.1);
+        }
+        .painting img {
+            width: 100%;
+            height: auto;
+        }
+        .painting h2 {
+            margin-top: 10px;
+        }
+        .painting p {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #051d03;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        footer ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .social-media img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+        }
+        header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+button:hover {
+            background-color: #10931b;
+        }
+
+        header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    color: #faf2f2fb;
+    text-decoration: none;
+}
+.painting:hover {
+    transform: scale(1.1);
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1> <span style="color: rgb(241, 241, 241);">PASTEL PAINTINGS</span></h1>
+        <nav>
+          
+        </nav>
+        
+    </header>
+</body>
+
+
+
+<section class="paintings">
+    <div class="painting">
+        <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.34.jpeg" alt="Water Painting 1">
+        <h2>batman joker</h2>
+        <p>"batman joker" presents a mesmerizing pastel rendition of the eternal dance between Gotham's Dark Knight and his most formidable adversary, the Joker. In this evocative portrait, the Joker's iconic visage emerges from the depths of darkness, his twisted grin a chilling echo of the chaos he unleashes upon the city.</p>
+        <p>Price: $150</p>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+        <button onclick="buyNow()">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+
+
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.26.jpeg" alt="Water Painting 2">
+            <h2>The Kathakali</h2>
+            <p>"Ethereal Expressions: The Kathakali Dance," the vibrant and evocative art form of Kathakali unfolds in a mesmerizing display of color and emotion. This pastel painting captures the essence of Kathakali, a traditional Indian dance-drama renowned for its elaborate costumes, intricate makeup, and expressive storytelling.
+
+            </p>
+            <p>Price: $200</p>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.33.jpeg" alt="Water Painting 2">
+            <h2>Melodies of the Divine: Krishna's Serenade</h2>
+            <p>"Melodies of the Divine: Krishna's Serenade" depicts a modern interpretation of Lord Krishna, the beloved deity of Hindu mythology, as he enchants the universe with the ethereal strains of his flute. In this pastel painting, Krishna stands amidst a celestial backdrop, his figure bathed in a soft, celestial light that radiates with divine grace.</p>
+            <p>Price: $200</p>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.06.jpeg" alt="Water Painting 2">
+            <h2>A Joker's Revelation</h2>
+            <p>"Jest of the Unseen: A Joker's Revelation" unveils a jarring and singular interpretation of the infamous Joker, imbuing the enigmatic figure with an aura of raw intensity and hidden depths. The pastel strokes coalesce into a visage that defies conventional depiction, with sharp angles and jagged lines that carve out the contours of the Joker's face in a style both haunting and unforgettable.</p>
+            <p>Price: $200</p>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.07.jpeg" alt="Water Painting 2">
+            <h2> A Mother's Embrace</h2>
+            <p>"Sacred Bond: A Mother's Embrace" is a celebration of the universal bond between mother and child, a testament to the profound love and connection that transcends words and comprehension. It invites the viewer to witness the miracle of life unfolding before their eyes, and to contemplate the infinite depths of a mother's love.</p>
+            <p>Price: $200</p>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.05.jpeg" alt="Water Painting 2">
+            <h2>Rhythms of Devotion: Drumming Before Durga Puja</h2>
+            <p>"Rhythms of Devotion: Drumming Before Durga Puja" is more than just a painting; it is a celebration of faith, tradition, and community. It invites the viewer to immerse themselves in the vibrant tapestry of Indian culture, to feel the pulsating rhythms of the drum reverberate through their soul, and to join in the joyous festivities that mark the arrival of Durga Puja.</p>
+            <p>Price: $200</p>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.18 (1).jpeg" alt="Water Painting 2">
+            <h2>Divine Groove: Ganesh's Dance of Creation</h2>
+            <p>"Divine Groove: Ganesh's Dance of Creation" is a celebration of the eternal dance of life and the divine presence that animates all of creation. It invites the viewer to surrender to the rhythm of the universe, to lose themselves in the beauty and majesty of Ganesh's dance, and to embrace the limitless potential of the cosmos.
+
+
+
+
+
+            </p>
+            <p>Price: $200</p>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.34 (1).jpeg" alt="Water Painting 2">
+            <h2>An ascetic holy man</h2>
+            <p>"An ascetic holy man" invites the viewer to join the ascetic on their journey towards inner peace and spiritual fulfillment. It is a meditation on the eternal quest for truth and meaning in a world filled with transient pleasures and fleeting distractions, and a reminder of the boundless potential that lies within each and every one of us.
+
+
+
+
+
+            </p>
+            <p>Price: $200</p>
+            <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+          <p>
+            <br>
+        </p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        </div>
+
+
+        
+
+    </section>
+    <script>
+        function redirectToCategory() {
+            var selectedCategory = document.getElementById("categorySelect").value;
+            if (selectedCategory) {
+                window.location.href = selectedCategory;
+            }
+        }
+        function buyNow() {
+    var paintingTitle = document.querySelector('.painting h2').innerText;
+    var paintingPrice = document.querySelector('.painting p:nth-child(3)').innerText;
+
+    var data = {
+        title: paintingTitle,
+        price: paintingPrice
+    };
+
+    var url = 'checkout.php'; // Example URL
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            window.location.href = 'thank_you.html';
+        }
+    };
+    xhr.send(JSON.stringify(data));
+}
+
+   
+       
+    function addToCart() {
+        alert("Item added to cart. Redirecting to checkout page...");
+    }
+
+
+    </script>
+
+    <footer>
+     
+    </footer>
+</body>
+</html>

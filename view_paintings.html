@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Paintings</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3qjvy9jg9NKve78z2Qn_DJ9cuUTCkLZaHonr9rJ2LNxziKEB6rp8d6BqTOZYSTv95m3I&usqp=CAU');
+        }
+        header {
+            background-color: #052204;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+            background-attachment: white;
+        }
+        .paintings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .painting {
+            margin: 20px;
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 20px 15px rgba(5, 19, 47, 0.1);
+        }
+        .painting img {
+            width: 100%;
+            height: auto;
+        }
+        .painting h2 {
+            margin-top: 10px;
+        }
+        .painting p {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #051d03;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        footer ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .social-media img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+        }
+        header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+button:hover {
+            background-color: #10931b;
+        }
+
+        header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    color: #faf2f2fb;
+    text-decoration: none;
+}
+.painting:hover {
+    transform: scale(1.1);
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>View Paintings</h1>
+          
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li>
+                    <select id="categorySelect" onchange="redirectToCategory()">
+                        <option value="">Categories</option>
+                        <option value="/Users/bibhuprasadshaw/Desktop/Project1/Abstract.html">Abstract</option>
+                        <option value="/Users/bibhuprasadshaw/Desktop/Project1/water.html">Water</option>
+                        <option value="/Users/bibhuprasadshaw/Desktop/Project1/pastel.html">Pastel</option>
+                    </select>
+                </li>
+                <li><a href="#section2">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+</body>
+
+
+
+<section class="paintings">
+    <div class="painting">
+        <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.22.jpeg" alt="Painting 1">
+        <h2>Sylvan Serenity</h2>
+        <p>"Sylvan Serenity" is a testament to the timeless beauty and tranquility of nature. It invites the viewer to escape the chaos of the modern world and immerse themselves in the peace and serenity of the forest. In its quiet majesty, one can find solace, inspiration, and a profound connection to the natural world.</p>
+        <p>Price: $200</p>
+        <button onclick="buyNow()">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+
+
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.26.jpeg" alt="Painting 2">
+            <h2>The Kathakali</h2>
+            <p>"Ethereal Expressions: The Kathakali Dance," the vibrant and evocative art form of Kathakali unfolds in a mesmerizing display of color and emotion. This pastel painting captures the essence of Kathakali, a traditional Indian dance-drama renowned for its elaborate costumes, intricate makeup, and expressive storytelling.
+                <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.33.jpeg" alt="Painting 3">
+            <h2>Melodies of the Divine: Krishna's Serenade</h2>
+            <p>"Melodies of the Divine: Krishna's Serenade" depicts a modern interpretation of Lord Krishna, the beloved deity of Hindu mythology, as he enchants the universe with the ethereal strains of his flute. In this pastel painting, Krishna stands amidst a celestial backdrop, his figure bathed in a soft, celestial light that radiates with divine grace.</p>
+            <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.11.jpeg" alt="Painting 4">
+            <h2>A Portrait of the Soul</h2>
+            <p class="description">"Ethereal Visage: A Portrait of the Soul" is a captivating abstract painting that defies conventional representation, offering a glimpse into the depths of the human spirit through its unique and enigmatic portrayal of the face. </p>
+            <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.20.jpeg" alt="Painting 5">
+            <h2>Bridge of Bonds</h2>
+            <p>"Bridge of Bonds" portrays a picturesque scene where connections between man, beast, and nature intertwine in a timeless tableau. At the heart of the painting stands a weathered wooden bridge, its arching structure a symbol of unity and passage.
+                <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.21.jpeg" alt="Painting 6">
+            <h2>Floral Whispers</h2>
+            <p>"Floral Whispers" is a painting that speaks volumes, inviting the viewer to pause and appreciate the beauty that surrounds them in the natural world. It is a celebration of the quiet moments of contemplation and the profound sense of wonder that arises from observing the intricate patterns and delicate beauty of flowers and foliage.
+                <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.07.jpeg" alt="Painting 7">
+            <h2>A Mother's Embrace</h2>
+            <p>"Sacred Bond: A Mother's Embrace" is a celebration of the universal bond between mother and child, a testament to the profound love and connection that transcends words and comprehension. It invites the viewer to witness the miracle of life unfolding before their eyes, and to contemplate the infinite depths of a mother's love.</p>
+            <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.17.jpeg" alt="Painting 8">
+            <h2>Eyes of Eternity</h2>
+            <p class="description">"Eyes of Eternity" is a captivating abstract painting that features a singular face intertwined with a peacock-like structure, evoking a sense of mystical beauty and transcendent grace. </p>
+            <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        </div>
+
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.06.jpeg"/D="nliads/WgatsApp 9m"ge 2024-04- at 20.3.3.jeg
+            <h2>A Joker's Revelation</h2>
+            <p>"Jest of the Unseen: A Joker's Revelation" unveils a jarring and singular interpretation of the infamous Joker, imbuing the enigmatic figure with an aura of raw intensity and hidden depths. The pastel strokes coalesce into a visage that defies conventional depiction, with sharp angles and jagged lines that carve out the contours of the Joker's face in a style both haunting and unforgettable.</p>
+            <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.20 (1).jpeg" alt="Painting 10">
+            <h2>Journey's Embrace</h2>
+            <p>"Journey's Embrace" captures a moment of quiet introspection as two figures traverse a winding road that cuts through a dense forest. The road stretches out before them, disappearing into the depths of the woodland, its path illuminated by dappled sunlight filtering through the canopy above.
+                <p>Price: $200</p>
+        <button onclick="buyNow()">Buy Now</button>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+        <div class="painting">
+            <img src="/Users/bibhuprasadshaw/Downloads/WhatsApp Image 2024-04-17 at 20.30.19.jpeg" alt="Painting 2">
+            <h2>Seaside Serenity</h2>
+            <p>"Seaside Serenity" captures the idyllic charm of a coastal retreat, where the rhythmic lull of the waves and the salty breeze beckon weary travelers to find solace in the embrace of the sea. Nestled along the shore, a quaint house stands as a beacon of warmth and hospitality, its weathered facade a testament to the passage of time and the enduring allure of seaside living.</p>
+            <p>Price: $200</p>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+    </section>
+    <script>
+        function redirectToCategory() {
+            var selectedCategory = document.getElementById("categorySelect").value;
+            if (selectedCategory) {
+                window.location.href = selectedCategory;
+            }
+        }
+        function buyNow() {
+    // Get the details of the selected painting
+    var paintingTitle = document.querySelector('.painting h2').innerText;
+    var paintingPrice = document.querySelector('.painting p:nth-child(3)').innerText;
+
+    // Prepare the data to be sent to the checkout page or backend
+    var data = {
+        title: paintingTitle,
+        price: paintingPrice
+        // Add any other relevant details here
+    };
+
+    // Send the data to the checkout page or backend
+    // Example: You can use AJAX to send the data to a backend endpoint
+    // Replace the URL below with the actual URL of your checkout page or backend endpoint
+    var url = 'checkout.php'; // Example URL
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Handle the response from the server if needed
+            var response = JSON.parse(xhr.responseText);
+            // Example: Redirect to a thank you page
+            window.location.href = 'thank_you.html';
+        }
+    };
+    xhr.send(JSON.stringify(data));
+}
+
+   
+       
+    function addToCart() {
+        // Add logic for Add to Cart functionality, e.g., add item to cart
+        alert("Item added to cart. Redirecting to checkout page...");
+    }
+
+
+    </script>
+
+    <footer>
+     
+    </footer>
+</body>
+</html>
